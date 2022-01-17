@@ -6,8 +6,8 @@ function sidebar() {
     <form  >
      
       
-      <input type="text" id="serchnews" placeholder="Search News" /> <br><br>
-
+      <input type="text"  id="serchnews" placeholder="Search News" /> <br><br>
+  
 
       <input type="text" id="Startups" placeholder="Startups" /> <br><br>
 

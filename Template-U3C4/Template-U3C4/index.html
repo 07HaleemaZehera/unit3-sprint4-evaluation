@@ -10,7 +10,7 @@
 
   <body>
     <div id="container">
-     
+     <div id="s"></div>
   
       <div id="main">
         <!--DO NOT CHANGE THIS ID's-->
@@ -21,8 +21,43 @@
 
 <script type="module">
   import sidebar from "./components/sidebar.js"
+  import{ apiCall, appendArticles} from "./scripts/main.js"
   // console.log("sidebar:",sidebar)
-  let container=document.getElementById("container")
-  container.innerHTML=sidebar()
+ 
+
+
+  let side =document.querySelector("#sidebar")
+  side.innerHTML=sidebar()
+
+
+  let button=document.querySelector("#shownews")
+ let main= document.querySelector("#main")
+
+ button.addEventListener("click",getnews)
+
+  function getnews() {
+
+// var news = document.querySelector('#main').value
+// console.log(news)
+
+
+let response = apiCall(`https://gnews.io/api/v4/top-headlines?token=bed1434b8a42016c2dc90617b93e3496&lang=en`)
+// console.log(response)
+
+
+response.then((res) => {
+    console.log(res)
+    appendArticles(res.articles,main)
+//     
+//    
+
+
+})
+response.catch((res) => {
+    
+    console.log(res)
+})
+// appendData(response)
+}
 
 </script>
