@@ -60,7 +60,22 @@ function appendArticles(articles, main) {
     
 
 
-    function appendnews()
+    function appendnews(article,main,heading,img,detail){
+
+
+        main.innerHTML=null;
+
+        let {title,description,image}=article
+
+        let head= document.createElement("h1")
+        head.innerHTML=title;
+        heading.append(head)
+
+        img.src=image;
+        let descrip=document.createElement("h1")
+        descrip.innerHTML=description
+        detail.append(descrip)
+    }
     
 
 
