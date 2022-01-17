@@ -1,0 +1,16 @@
+/* #sidebar{
+    display: flex;
+} */
+
+form{
+    /* display: flex; */
+    padding-left:5%;
+    margin-top:3px;
+    /* border:solid black; */
+    justify-content: space-between;
+}
+
+#audio{
+   font-weight: 700;
+
+}
